@@ -3,6 +3,7 @@ def authorize(
 ):
     """Perform authorize transaction."""
     from saleor.payment import TransactionKind
+    from saleor.payment.interface import GatewayResponse
 
     return GatewayResponse(
         error=None,
@@ -18,6 +19,7 @@ def authorize(
 def void(payment_information, config):
     """Perform void transaction."""
     from saleor.payment import TransactionKind
+    from saleor.payment.interface import GatewayResponse
 
     return GatewayResponse(
         error=None,
@@ -33,6 +35,7 @@ def void(payment_information, config):
 def capture(payment_information, config):
     """Perform capture transaction."""
     from saleor.payment import TransactionKind
+    from saleor.payment.interface import GatewayResponse
 
     return GatewayResponse(
         error=None,
@@ -48,6 +51,7 @@ def capture(payment_information, config):
 def confirm(payment_information, config):
     """Perform confirm transaction."""
     from saleor.payment import TransactionKind
+    from saleor.payment.interface import GatewayResponse
 
     return GatewayResponse(
         error=None,
@@ -62,6 +66,7 @@ def confirm(payment_information, config):
 
 def refund(payment_information, config):
     from saleor.payment import TransactionKind
+    from saleor.payment.interface import GatewayResponse
 
     return GatewayResponse(
         error=None,
